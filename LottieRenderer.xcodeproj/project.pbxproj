@@ -6,15 +6,29 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		EA4E2B7C2ED8C22D001B2FDE /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = EA4E2B7B2ED8C22D001B2FDE /* Lottie */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		EA4E2AE22ED8AE1F001B2FDE /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			buildActionMask = 8;
+			dstPath = usr/share/man/man1;
+			dstSubfolderSpec = 10;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 1;
+		};
+		EA4E2B622ED8B6AA001B2FDE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -35,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA4E2B7C2ED8C22D001B2FDE /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +82,7 @@
 				EA4E2AE02ED8AE1F001B2FDE /* Sources */,
 				EA4E2AE12ED8AE1F001B2FDE /* Frameworks */,
 				EA4E2AE22ED8AE1F001B2FDE /* CopyFiles */,
+				EA4E2B622ED8B6AA001B2FDE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -77,6 +93,7 @@
 			);
 			name = LottieRenderer;
 			packageProductDependencies = (
+				EA4E2B7B2ED8C22D001B2FDE /* Lottie */,
 			);
 			productName = LottieRenderer;
 			productReference = EA4E2AE42ED8AE1F001B2FDE /* LottieRenderer */;
@@ -106,6 +123,9 @@
 			);
 			mainGroup = EA4E2ADB2ED8AE1F001B2FDE;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				EA4E2B762ED8C217001B2FDE /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = EA4E2AE52ED8AE1F001B2FDE /* Products */;
 			projectDirPath = "";
@@ -250,26 +270,30 @@
 		EA4E2AEC2ED8AE1F001B2FDE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = DXQW789A36;
-				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexb.lottierenderer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 			};
 			name = Debug;
 		};
 		EA4E2AED2ED8AE1F001B2FDE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = DXQW789A36;
-				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexb.lottierenderer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 			};
 			name = Release;
 		};
@@ -295,6 +319,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EA4E2B762ED8C217001B2FDE /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.5.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EA4E2B7B2ED8C22D001B2FDE /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EA4E2B762ED8C217001B2FDE /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EA4E2ADC2ED8AE1F001B2FDE /* Project object */;
 }
