@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EA4E2B7C2ED8C22D001B2FDE /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = EA4E2B7B2ED8C22D001B2FDE /* Lottie */; };
+		EA4E2B7F2ED9A480001B2FDE /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = EA4E2B7E2ED9A480001B2FDE /* ArgumentParser */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,7 +34,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		EA4E2AE42ED8AE1F001B2FDE /* LottieRenderer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LottieRenderer; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA4E2AE42ED8AE1F001B2FDE /* lottie2mp4 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = lottie2mp4; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -49,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA4E2B7F2ED9A480001B2FDE /* ArgumentParser in Frameworks */,
 				EA4E2B7C2ED8C22D001B2FDE /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -67,7 +69,7 @@
 		EA4E2AE52ED8AE1F001B2FDE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EA4E2AE42ED8AE1F001B2FDE /* LottieRenderer */,
+				EA4E2AE42ED8AE1F001B2FDE /* lottie2mp4 */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -94,9 +96,10 @@
 			name = LottieRenderer;
 			packageProductDependencies = (
 				EA4E2B7B2ED8C22D001B2FDE /* Lottie */,
+				EA4E2B7E2ED9A480001B2FDE /* ArgumentParser */,
 			);
 			productName = LottieRenderer;
-			productReference = EA4E2AE42ED8AE1F001B2FDE /* LottieRenderer */;
+			productReference = EA4E2AE42ED8AE1F001B2FDE /* lottie2mp4 */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -125,6 +128,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				EA4E2B762ED8C217001B2FDE /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				EA4E2B7D2ED9A480001B2FDE /* XCRemoteSwiftPackageReference "swift-argument-parser" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = EA4E2AE52ED8AE1F001B2FDE /* Products */;
@@ -275,7 +279,7 @@
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = DXQW789A36;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexb.lottierenderer;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = lottie2mp4;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 6.0;
@@ -290,7 +294,7 @@
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = DXQW789A36;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexb.lottierenderer;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = lottie2mp4;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 6.0;
@@ -329,6 +333,14 @@
 				minimumVersion = 4.5.2;
 			};
 		};
+		EA4E2B7D2ED9A480001B2FDE /* XCRemoteSwiftPackageReference "swift-argument-parser" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-argument-parser.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.6.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -336,6 +348,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = EA4E2B762ED8C217001B2FDE /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
+		};
+		EA4E2B7E2ED9A480001B2FDE /* ArgumentParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EA4E2B7D2ED9A480001B2FDE /* XCRemoteSwiftPackageReference "swift-argument-parser" */;
+			productName = ArgumentParser;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
